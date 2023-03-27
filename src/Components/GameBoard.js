@@ -1,22 +1,12 @@
 import React from "react";
-
+import '../Game.css'
 import GameCircle from "./gameCircle";
 
 function GameBoard() {
-  const style = {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr",
-    gridTemplateRows: "1fr 1fr 1fr 1fr",
-    padding: 20,
-    width: "500px",
-    position: "absolute",
-    left: "50%",
-    marginLeft: "-250px",
-    top: "20%",
-  };
+
 
   return (
-    <div style={style}>
+    <div className="gameBoard">
       <GameCircle id={1} color="red"></GameCircle>
       <GameCircle id={2} color="blue"></GameCircle>
       <GameCircle id={3} color="red"></GameCircle>
