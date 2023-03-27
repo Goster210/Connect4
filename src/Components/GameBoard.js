@@ -1,12 +1,19 @@
 import React from "react";
 
-
+import GameCircle from "./gameCircle";
 
 function GameBoard() {
     return (
       <div >
-        <h1>GAME BOARD</h1>
-  
+        <GameCircle/>
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
+        <GameCircle/>  
       </div>
     );
   }
