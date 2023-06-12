@@ -28,23 +28,28 @@
 
 .footer {
   left: 50%;
-  top: 750px;
+  top: 755px;
   height: 80px;
   width: 300px;
   margin-left: -120px;
+
 }
 
 .footer button {
-  position: relative;
-  left: 50%;
-  top: 20%;
-  margin-left: -125px;
-  width: 250px;
+  
+  width: 140px;
   height: 50px;
+  margin-left: 5px;
+  margin-top: 15px;
   background-color: lightblue;
-  font-size: 30px;
-  border: 5ox solid chocolate;
+  font-size: 20px;
+  box-shadow: 3px, 5px 10px 2px rgba(0, 0, 0, 0.9);
+  border: 5px solid chocolate;
   font-weight: bold;
+}
+
+.footer button:hover{
+  background-color: chocolate;
 }
 
 .gameBoard {

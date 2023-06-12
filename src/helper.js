@@ -1,5 +1,5 @@
 export const isWinner = (gameBoard, currentMove, currentPlayer) => {
-  let board = [...gameBoard]
+  let board = [...gameBoard];
   board[currentMove] = currentPlayer;
   const winLines = [
     [0, 1, 2, 3],
@@ -13,9 +13,8 @@ export const isWinner = (gameBoard, currentMove, currentPlayer) => {
     [0, 5, 10, 16],
     [3, 6, 9, 12],
   ];
-  
-  for (let i = 0; i < winLines.length; i++) {
 
+  for (let i = 0; i < winLines.length; i++) {
     const [c1, c2, c3, c4] = winLines[i];
 
     if (
@@ -26,17 +25,27 @@ export const isWinner = (gameBoard, currentMove, currentPlayer) => {
     ) {
       return true;
     }
-
   }
   return false;
 };
 
-export const isDraw = (gameBoard, currentMove, currentPlayer) =>{
-
+export const isDraw = (gameBoard, currentMove, currentPlayer) => {
   let board = [...gameBoard];
 
   board[currentMove] = currentPlayer;
 
-  let count = board.reduce((n, x) => n +(x === 0),0);
-  return count ===0;
-}
+  let count = board.reduce((n, x) => n + (x === 0), 0);
+  return count === 0;
+};
+
+export const getComputerMove = (gameBoard) => {
+  let validMoves = [];
+
+  for (let i = 0; i < gameBoard.length; i++) {
+    if (gameBoard[i] === 0) {
+      validMoves.push(i);
+    }
+  }
+  let rndMove = Math.floor(Math.random() * validMoves.length);
+  return validMoves[rndMove];
+};
